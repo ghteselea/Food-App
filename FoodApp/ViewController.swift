@@ -9,6 +9,12 @@ import UIKit
 import Firebase
 
 class ViewController: UIViewController {
+    
+    // IBOutlet tableView
+    #warning("TODO - Add TableView outlet")
+    
+    var arrayOfFoods: [Food] = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,11 +114,22 @@ class ViewController: UIViewController {
         foodsRef.observe(.value, with: {
             dataSnapshot in
 
-            let pizzaDictionary = dataSnapshot.value as! [String : AnyObject]
-            for dictionary in pizzaDictionary {
+            let dictionaries = dataSnapshot.value as! [String : Any]
+            for dictionary in dictionaries {
                 print("cheia este \(dictionary.key)")
                 print("valoarea este \(dictionary.value)")
+                
+                do {
+                    let food = try Food(dictionary: dictionary.value as? [String : Any] ?? [:])
+                    print(food.name)
+                    self.arrayOfFoods.append(food)
+                } catch {
+                    print(error.localizedDescription)
+                }
             }
+            
+            #warning("TODO - Reload TableView")
+//            self.tableView.reload()
         })
         
         // MARK: - UPDATE

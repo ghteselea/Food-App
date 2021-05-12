@@ -16,6 +16,7 @@
 		4A15B0E526399A0E0099013F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A15B0E326399A0E0099013F /* LaunchScreen.storyboard */; };
 		4A15B0EE2639C3550099013F /* Design.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A15B0ED2639C3550099013F /* Design.storyboard */; };
 		4AB28C612647C893005BA2E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AB28C602647C893005BA2E8 /* GoogleService-Info.plist */; };
+		4AB28C75264C57DD005BA2E8 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB28C74264C57DD005BA2E8 /* Food.swift */; };
 		64535A42E625774659F09321 /* Pods_FoodApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08246A4CEEF90A69F52A0A5A /* Pods_FoodApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		4A15B0E626399A0E0099013F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A15B0ED2639C3550099013F /* Design.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Design.storyboard; sourceTree = "<group>"; };
 		4AB28C602647C893005BA2E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4AB28C74264C57DD005BA2E8 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		C84A703AE8B3D6A8B9A59998 /* Pods-FoodApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodApp.debug.xcconfig"; path = "Target Support Files/Pods-FoodApp/Pods-FoodApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EB2E4E8AF6A24C7CBA2125E0 /* Pods-FoodApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodApp.release.xcconfig"; path = "Target Support Files/Pods-FoodApp/Pods-FoodApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 		4A15B0D426399A080099013F /* FoodApp */ = {
 			isa = PBXGroup;
 			children = (
+				4AB28C73264C57C9005BA2E8 /* Models */,
 				4A15B0D526399A080099013F /* AppDelegate.swift */,
 				4A15B0D726399A080099013F /* SceneDelegate.swift */,
 				4A15B0D926399A080099013F /* ViewController.swift */,
@@ -81,6 +84,14 @@
 				4A15B0ED2639C3550099013F /* Design.storyboard */,
 			);
 			path = FoodApp;
+			sourceTree = "<group>";
+		};
+		4AB28C73264C57C9005BA2E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4AB28C74264C57DD005BA2E8 /* Food.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		93904BECD0CFB13BA4A215C4 /* Frameworks */ = {
@@ -218,6 +229,7 @@
 			files = (
 				4A15B0DA26399A080099013F /* ViewController.swift in Sources */,
 				4A15B0E026399A080099013F /* FoodApp.xcdatamodeld in Sources */,
+				4AB28C75264C57DD005BA2E8 /* Food.swift in Sources */,
 				4A15B0D626399A080099013F /* AppDelegate.swift in Sources */,
 				4A15B0D826399A080099013F /* SceneDelegate.swift in Sources */,
 			);
