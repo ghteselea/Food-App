@@ -104,11 +104,9 @@ class FirebaseManager {
     func updateData() {
         let rootRef = database.reference()
         let foodsRef = rootRef.child("foods")
-        let pizzaAndPastaRef = foodsRef.child("pizza&pasta")
-        let pizzaCategoryRef = pizzaAndPastaRef.child("pizza")
-        let pizzaRef = pizzaCategoryRef.child("capriciosa")
+        let baconBurger = foodsRef.child("Bacon Burger")
         
-        pizzaRef.updateChildValues(["ceva":"altfel"], withCompletionBlock: {
+        baconBurger.updateChildValues(["url":"https://de.company.burger-king.ch/006_ch/products/image-thumb__24048__product_detail/Appenzeller_Single.png"], withCompletionBlock: {
             error, dataSnapshot in
             
             if let error = error {
