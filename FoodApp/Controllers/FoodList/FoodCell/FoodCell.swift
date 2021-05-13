@@ -11,6 +11,10 @@ class FoodCell: UITableViewCell {
 
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
+    // pretul
+    // ingrediente
+    // buton de love ( add to favorites )
+    #warning("TODO GHITA")
     
     static let identifier: String = String(describing: FoodCell.self) // FoodCell
     
