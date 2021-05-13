@@ -9,8 +9,8 @@ import UIKit
 
 class FoodCell: UITableViewCell {
 
-    @IBOutlet weak var img: UIImageView!
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var titleLbl: UILabel!
     
     static let identifier: String = String(describing: FoodCell.self) // FoodCell
     

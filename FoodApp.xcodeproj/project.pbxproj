@@ -20,6 +20,7 @@
 		4AB28C7B264DAC08005BA2E8 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB28C79264DAC08005BA2E8 /* FoodCell.swift */; };
 		4AB28C7C264DAC08005BA2E8 /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AB28C7A264DAC08005BA2E8 /* FoodCell.xib */; };
 		4AB28C88264DBCB4005BA2E8 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB28C87264DBCB4005BA2E8 /* UIImageView+Extension.swift */; };
+		4AB28C91264DBF14005BA2E8 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB28C90264DBF14005BA2E8 /* FirebaseManager.swift */; };
 		64535A42E625774659F09321 /* Pods_FoodApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08246A4CEEF90A69F52A0A5A /* Pods_FoodApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		4AB28C79264DAC08005BA2E8 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		4AB28C7A264DAC08005BA2E8 /* FoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
 		4AB28C87264DBCB4005BA2E8 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		4AB28C90264DBF14005BA2E8 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		C84A703AE8B3D6A8B9A59998 /* Pods-FoodApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodApp.debug.xcconfig"; path = "Target Support Files/Pods-FoodApp/Pods-FoodApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EB2E4E8AF6A24C7CBA2125E0 /* Pods-FoodApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodApp.release.xcconfig"; path = "Target Support Files/Pods-FoodApp/Pods-FoodApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,18 +79,15 @@
 		4A15B0D426399A080099013F /* FoodApp */ = {
 			isa = PBXGroup;
 			children = (
+				4AB28C8E264DBECC005BA2E8 /* CoreData */,
 				4AB28C85264DBC9E005BA2E8 /* Utils */,
 				4AB28C73264C57C9005BA2E8 /* Models */,
 				4AB28C82264DB666005BA2E8 /* Controllers */,
+				4AB28C8B264DBE34005BA2E8 /* Views */,
 				4A15B0D526399A080099013F /* AppDelegate.swift */,
 				4A15B0D726399A080099013F /* SceneDelegate.swift */,
-				4A15B0DB26399A080099013F /* Main.storyboard */,
-				4A15B0E126399A0E0099013F /* Assets.xcassets */,
-				4A15B0E326399A0E0099013F /* LaunchScreen.storyboard */,
 				4A15B0E626399A0E0099013F /* Info.plist */,
-				4AB28C602647C893005BA2E8 /* GoogleService-Info.plist */,
-				4A15B0DE26399A080099013F /* FoodApp.xcdatamodeld */,
-				4A15B0ED2639C3550099013F /* Design.storyboard */,
+				4AB28C8D264DBE59005BA2E8 /* Supporting Files */,
 			);
 			path = FoodApp;
 			sourceTree = "<group>";
@@ -131,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				4AB28C86264DBCA4005BA2E8 /* Extensions */,
+				4AB28C90264DBF14005BA2E8 /* FirebaseManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -141,6 +141,41 @@
 				4AB28C87264DBCB4005BA2E8 /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4AB28C8B264DBE34005BA2E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AB28C8C264DBE42005BA2E8 /* Launch Screen */,
+				4A15B0DB26399A080099013F /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4AB28C8C264DBE42005BA2E8 /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				4A15B0E326399A0E0099013F /* LaunchScreen.storyboard */,
+			);
+			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		4AB28C8D264DBE59005BA2E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A15B0E126399A0E0099013F /* Assets.xcassets */,
+				4AB28C602647C893005BA2E8 /* GoogleService-Info.plist */,
+				4A15B0ED2639C3550099013F /* Design.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4AB28C8E264DBECC005BA2E8 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4A15B0DE26399A080099013F /* FoodApp.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		93904BECD0CFB13BA4A215C4 /* Frameworks */ = {
@@ -281,6 +316,7 @@
 				4A15B0E026399A080099013F /* FoodApp.xcdatamodeld in Sources */,
 				4AB28C88264DBCB4005BA2E8 /* UIImageView+Extension.swift in Sources */,
 				4AB28C75264C57DD005BA2E8 /* Food.swift in Sources */,
+				4AB28C91264DBF14005BA2E8 /* FirebaseManager.swift in Sources */,
 				4AB28C7B264DAC08005BA2E8 /* FoodCell.swift in Sources */,
 				4A15B0D626399A080099013F /* AppDelegate.swift in Sources */,
 				4A15B0D826399A080099013F /* SceneDelegate.swift in Sources */,

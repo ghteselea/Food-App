@@ -50,8 +50,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="img" destination="SBU-7L-5HL" id="igC-UE-f3T"/>
-                <outlet property="title" destination="EaS-Ot-tJg" id="6JA-eJ-CyP"/>
+                <outlet property="imgView" destination="SBU-7L-5HL" id="igC-UE-f3T"/>
+                <outlet property="titleLbl" destination="EaS-Ot-tJg" id="6JA-eJ-CyP"/>
             </connections>
             <point key="canvasLocation" x="118.11594202898551" y="104.46428571428571"/>
         </tableViewCell>
