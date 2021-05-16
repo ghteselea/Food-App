@@ -32,9 +32,38 @@ class LoginViewController: UIViewController {
             return
         }
         
-        AlertManager.shared.showAlertManager(vc: self, message: "Everything is ok", handler: {
-            print("Everything is ok.")
-        })
+        Auth.auth().signIn(withEmail: email, password: password) { (authDataResult, error) in
+            if let error = error {
+                AlertManager.shared.showAlertManager(vc: self, message: error.localizedDescription, handler: {})
+                return
+            }
+            
+            guard let user = authDataResult?.user else {
+                return
+            }
+            
+            print(
+                """
+                        isAnonymous: \(user.isAnonymous),
+                        isEmailVerified: \(user.isEmailVerified),
+                        metadata: \(user.metadata),
+                        multiFactor: \(user.multiFactor),
+                        providerData: \(user.providerData),
+                        providerID: \(user.providerID),
+                        uid: \(user.uid),
+                        description: \(user.description),
+                    """
+            )
+            if user.isEmailVerified == true {
+                AlertManager.shared.showAlertManager(vc: self, message: "Welcome", handler: {
+                    print("Welcome")
+                })
+            } else {
+                AlertManager.shared.showAlertManager(vc: self, message: "You need to check your confirmation email.", handler: {
+                    print("Email not verifed")
+                })
+            }
+        }
     }
     
     @IBAction func newAccountBtn(_ sender: Any) {
