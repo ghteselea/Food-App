@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction func loginBtn(_ sender: Any) {
+    @IBAction func loginBtnPressed(_ sender: Any) {
         guard let email = emailTextField.text,
               let password = passwordTextField.text,
               !email.isEmpty && !password.isEmpty else {
@@ -57,6 +57,7 @@ class LoginViewController: UIViewController {
             if user.isEmailVerified == true {
                 AlertManager.shared.showAlertManager(vc: self, message: "Welcome", handler: {
                     print("Welcome")
+                    self.navigationController?.popViewController(animated: true)
                 })
             } else {
                 AlertManager.shared.showAlertManager(vc: self, message: "You need to check your confirmation email.", handler: {

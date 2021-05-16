@@ -17,6 +17,7 @@
 		4A15B0EE2639C3550099013F /* Design.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A15B0ED2639C3550099013F /* Design.storyboard */; };
 		4A4D70A126511E06007A4848 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70A026511E06007A4848 /* LoginViewController.swift */; };
 		4A4D70A626513195007A4848 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70A526513195007A4848 /* AlertManager.swift */; };
+		4A4D70AE26514DB0007A4848 /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70AD26514DB0007A4848 /* UserAccountViewController.swift */; };
 		4AB28C612647C893005BA2E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AB28C602647C893005BA2E8 /* GoogleService-Info.plist */; };
 		4AB28C75264C57DD005BA2E8 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB28C74264C57DD005BA2E8 /* Food.swift */; };
 		4AB28C7B264DAC08005BA2E8 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB28C79264DAC08005BA2E8 /* FoodCell.swift */; };
@@ -40,6 +41,7 @@
 		4A15B0ED2639C3550099013F /* Design.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Design.storyboard; sourceTree = "<group>"; };
 		4A4D70A026511E06007A4848 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4A4D70A526513195007A4848 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		4A4D70AD26514DB0007A4848 /* UserAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewController.swift; sourceTree = "<group>"; };
 		4AB28C602647C893005BA2E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4AB28C74264C57DD005BA2E8 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		4AB28C79264DAC08005BA2E8 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
@@ -112,6 +114,31 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		4A4D70A926514D58007A4848 /* HomeTabBarItem */ = {
+			isa = PBXGroup;
+			children = (
+				4AB28C83264DB670005BA2E8 /* FoodList */,
+			);
+			path = HomeTabBarItem;
+			sourceTree = "<group>";
+		};
+		4A4D70AB26514D7B007A4848 /* UserTabBarItem */ = {
+			isa = PBXGroup;
+			children = (
+				4A4D70AC26514D8A007A4848 /* UserAccountViewController */,
+				4A4D709F26511DC7007A4848 /* Login */,
+			);
+			path = UserTabBarItem;
+			sourceTree = "<group>";
+		};
+		4A4D70AC26514D8A007A4848 /* UserAccountViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A4D70AD26514DB0007A4848 /* UserAccountViewController.swift */,
+			);
+			path = UserAccountViewController;
+			sourceTree = "<group>";
+		};
 		4AB28C73264C57C9005BA2E8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,8 +159,8 @@
 		4AB28C82264DB666005BA2E8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4A4D709F26511DC7007A4848 /* Login */,
-				4AB28C83264DB670005BA2E8 /* FoodList */,
+				4A4D70A926514D58007A4848 /* HomeTabBarItem */,
+				4A4D70AB26514D7B007A4848 /* UserTabBarItem */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -337,6 +364,7 @@
 				4A4D70A126511E06007A4848 /* LoginViewController.swift in Sources */,
 				4A15B0DA26399A080099013F /* FoodListViewController.swift in Sources */,
 				4A4D70A626513195007A4848 /* AlertManager.swift in Sources */,
+				4A4D70AE26514DB0007A4848 /* UserAccountViewController.swift in Sources */,
 				4A15B0E026399A080099013F /* FoodApp.xcdatamodeld in Sources */,
 				4AB28C88264DBCB4005BA2E8 /* UIImageView+Extension.swift in Sources */,
 				4AB28C75264C57DD005BA2E8 /* Food.swift in Sources */,
