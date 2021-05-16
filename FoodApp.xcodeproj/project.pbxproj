@@ -15,6 +15,8 @@
 		4A15B0E226399A0E0099013F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A15B0E126399A0E0099013F /* Assets.xcassets */; };
 		4A15B0E526399A0E0099013F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A15B0E326399A0E0099013F /* LaunchScreen.storyboard */; };
 		4A15B0EE2639C3550099013F /* Design.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A15B0ED2639C3550099013F /* Design.storyboard */; };
+		4A4D70A126511E06007A4848 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70A026511E06007A4848 /* LoginViewController.swift */; };
+		4A4D70A626513195007A4848 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70A526513195007A4848 /* AlertManager.swift */; };
 		4AB28C612647C893005BA2E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AB28C602647C893005BA2E8 /* GoogleService-Info.plist */; };
 		4AB28C75264C57DD005BA2E8 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB28C74264C57DD005BA2E8 /* Food.swift */; };
 		4AB28C7B264DAC08005BA2E8 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB28C79264DAC08005BA2E8 /* FoodCell.swift */; };
@@ -36,6 +38,8 @@
 		4A15B0E426399A0E0099013F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A15B0E626399A0E0099013F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A15B0ED2639C3550099013F /* Design.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Design.storyboard; sourceTree = "<group>"; };
+		4A4D70A026511E06007A4848 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4A4D70A526513195007A4848 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		4AB28C602647C893005BA2E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4AB28C74264C57DD005BA2E8 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		4AB28C79264DAC08005BA2E8 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 		4A15B0D426399A080099013F /* FoodApp */ = {
 			isa = PBXGroup;
 			children = (
+				4A4D70A42651310F007A4848 /* New Group */,
 				4AB28C8E264DBECC005BA2E8 /* CoreData */,
 				4AB28C85264DBC9E005BA2E8 /* Utils */,
 				4AB28C73264C57C9005BA2E8 /* Models */,
@@ -90,6 +95,21 @@
 				4AB28C8D264DBE59005BA2E8 /* Supporting Files */,
 			);
 			path = FoodApp;
+			sourceTree = "<group>";
+		};
+		4A4D709F26511DC7007A4848 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4A4D70A026511E06007A4848 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4A4D70A42651310F007A4848 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		4AB28C73264C57C9005BA2E8 /* Models */ = {
@@ -112,6 +132,7 @@
 		4AB28C82264DB666005BA2E8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4A4D709F26511DC7007A4848 /* Login */,
 				4AB28C83264DB670005BA2E8 /* FoodList */,
 			);
 			path = Controllers;
@@ -131,6 +152,7 @@
 			children = (
 				4AB28C86264DBCA4005BA2E8 /* Extensions */,
 				4AB28C90264DBF14005BA2E8 /* FirebaseManager.swift */,
+				4A4D70A526513195007A4848 /* AlertManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -312,7 +334,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4D70A126511E06007A4848 /* LoginViewController.swift in Sources */,
 				4A15B0DA26399A080099013F /* FoodListViewController.swift in Sources */,
+				4A4D70A626513195007A4848 /* AlertManager.swift in Sources */,
 				4A15B0E026399A080099013F /* FoodApp.xcdatamodeld in Sources */,
 				4AB28C88264DBCB4005BA2E8 /* UIImageView+Extension.swift in Sources */,
 				4AB28C75264C57DD005BA2E8 /* Food.swift in Sources */,
