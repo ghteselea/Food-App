@@ -13,6 +13,7 @@ class FoodCell: UITableViewCell {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
     
+    var viewController: UIViewController?
     var isFavourite: Bool = false
     var foodId: Int?
     var favoriteIds: [Int] = []
@@ -39,7 +40,18 @@ class FoodCell: UITableViewCell {
             favoriteIds.append(foodId)
         }
         
-        favouritesRef.updateChildValues(["id" : favoriteIds])
+        favouritesRef.updateChildValues(["id" : favoriteIds]) { (error, _) in
+            guard let error = error else {
+                return
+            }
+            
+            guard let viewController = self.viewController else {
+                print("ViewController not existing")
+                return
+            }
+            
+            AlertManager.shared.showAlertManager(vc: viewController, message: error.localizedDescription, handler: {})
+        }
     }
     
     func setupHeart() {

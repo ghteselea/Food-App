@@ -97,6 +97,8 @@ extension FoodListViewController: UITableViewDataSource {
             
             cell.favoriteIds = arrayOfFavourites
             
+            cell.viewController = self
+            
             cell.setupHeart()
             
             return cell
