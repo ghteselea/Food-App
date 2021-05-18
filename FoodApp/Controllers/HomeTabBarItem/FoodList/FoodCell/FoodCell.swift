@@ -9,24 +9,30 @@ import UIKit
 
 class FoodCell: UITableViewCell {
 
+    @IBOutlet weak var loveBtn: UIButton!
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
-    // pretul
-    // ingrediente
-    // buton de love ( add to favorites )
-    #warning("TODO GHITA")
     
-    static let identifier: String = String(describing: FoodCell.self) // FoodCell
+    var isFavourite: Bool = false
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    static let identifier: String = String(describing: FoodCell.self) // FoodCel
+    
+    @IBAction func changeImageHeart(_ sender: UIButton) {
+        if isFavourite {
+            isFavourite = false
+        } else {
+            isFavourite = true
+        }
+        
+        setupHeart()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setupHeart() {
+        if isFavourite {
+            loveBtn.setImage(UIImage(named: "red_heart.png"), for: .normal)
+        } else {
+            loveBtn.setImage(UIImage(named: "white_heart.png"), for: .normal)
+        }
     }
     
 }

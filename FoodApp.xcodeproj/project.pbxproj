@@ -85,7 +85,6 @@
 		4A15B0D426399A080099013F /* FoodApp */ = {
 			isa = PBXGroup;
 			children = (
-				4A4D70A42651310F007A4848 /* New Group */,
 				4AB28C8E264DBECC005BA2E8 /* CoreData */,
 				4AB28C85264DBC9E005BA2E8 /* Utils */,
 				4AB28C73264C57C9005BA2E8 /* Models */,
@@ -105,13 +104,6 @@
 				4A4D70A026511E06007A4848 /* LoginViewController.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		4A4D70A42651310F007A4848 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		4A4D70A926514D58007A4848 /* HomeTabBarItem */ = {
@@ -139,6 +131,21 @@
 			path = UserAccountViewController;
 			sourceTree = "<group>";
 		};
+		4A4D70B226544F2C007A4848 /* FavouritesTabItem */ = {
+			isa = PBXGroup;
+			children = (
+				4A4D70B326544F76007A4848 /* FoodFavouritesList */,
+			);
+			path = FavouritesTabItem;
+			sourceTree = "<group>";
+		};
+		4A4D70B326544F76007A4848 /* FoodFavouritesList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FoodFavouritesList;
+			sourceTree = "<group>";
+		};
 		4AB28C73264C57C9005BA2E8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +166,7 @@
 		4AB28C82264DB666005BA2E8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4A4D70B226544F2C007A4848 /* FavouritesTabItem */,
 				4A4D70A926514D58007A4848 /* HomeTabBarItem */,
 				4A4D70AB26514D7B007A4848 /* UserTabBarItem */,
 			);

@@ -15,6 +15,7 @@ class FoodListViewController: UIViewController {
     
     // MARK: - Variables
     var arrayOfFoods: [Food] = []
+    var arrayOfFavourites: [Int] = []
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -28,10 +29,12 @@ class FoodListViewController: UIViewController {
         // MARK: - CITIRE DATE DIN FIREBASE
         let database = FirebaseManager.sharedInstance.database
         let rootRef = database.reference()
-        let foodsRef = rootRef.child("foods")
         
+        let foodsRef = rootRef.child("foods")
         foodsRef.observe(.value, with: {
             dataSnapshot in
+            
+            self.arrayOfFavourites.removeAll()
             
             let dictionaries = dataSnapshot.value as! [String : Any]
             for dictionary in dictionaries {
@@ -49,6 +52,23 @@ class FoodListViewController: UIViewController {
             
             self.tableView.reloadData()
         })
+        
+        let favouritesRef = rootRef.child("favourites")
+        let idsRef = favouritesRef.child("id")
+        idsRef.observe(.value, with: {
+            dataSnapshot in
+            
+            self.arrayOfFavourites.removeAll()
+            
+            let array = dataSnapshot.value as! [Int]
+            for element in array {
+                print("valoarea este \(element)")
+                
+                self.arrayOfFavourites.append(element)
+            }
+            
+            self.tableView.reloadData()
+        })
     }
 }
 
@@ -60,8 +80,20 @@ extension FoodListViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: FoodCell.identifier, for: indexPath) as? FoodCell {
-            cell.titleLbl.text = arrayOfFoods[indexPath.row].name
-            cell.imgView.load(url: arrayOfFoods[indexPath.row].url)
+            
+            let currentFood: Food = arrayOfFoods[indexPath.row]
+            
+            cell.titleLbl.text = currentFood.name
+            cell.imgView.load(url: currentFood.url)
+            
+            if arrayOfFavourites.contains(currentFood.id) {
+                cell.isFavourite = true
+            } else {
+                cell.isFavourite = false
+            }
+            
+            cell.setupHeart()
+            
             return cell
         }
         

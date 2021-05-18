@@ -32,10 +32,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3O-Y0-4f5">
+                                <rect key="frame" x="367" y="10" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="dDy-JK-xf4"/>
+                                    <constraint firstAttribute="width" constant="20" id="tsw-7V-cl5"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="white heart"/>
+                                <connections>
+                                    <action selector="changeImageHeart:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IAx-kW-bxq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="SBU-7L-5HL" secondAttribute="bottom" id="6Lb-6u-B2k"/>
+                            <constraint firstItem="r3O-Y0-4f5" firstAttribute="top" secondItem="Riv-9o-ORW" secondAttribute="top" constant="10" id="6l5-2x-eJI"/>
+                            <constraint firstAttribute="trailing" secondItem="r3O-Y0-4f5" secondAttribute="trailing" constant="10" id="Eq9-UG-PQn"/>
                             <constraint firstItem="SBU-7L-5HL" firstAttribute="top" secondItem="Riv-9o-ORW" secondAttribute="top" id="N0W-pf-VF3"/>
                             <constraint firstItem="EaS-Ot-tJg" firstAttribute="top" secondItem="Riv-9o-ORW" secondAttribute="top" constant="5" id="O1K-v6-Lfg"/>
                             <constraint firstItem="SBU-7L-5HL" firstAttribute="leading" secondItem="Riv-9o-ORW" secondAttribute="leading" constant="8" id="aWj-0D-ygy"/>
@@ -53,6 +66,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="imgView" destination="SBU-7L-5HL" id="igC-UE-f3T"/>
+                <outlet property="loveBtn" destination="r3O-Y0-4f5" id="rV9-v3-Rs1"/>
                 <outlet property="titleLbl" destination="EaS-Ot-tJg" id="6JA-eJ-CyP"/>
             </connections>
             <point key="canvasLocation" x="200.72463768115944" y="111.49553571428571"/>
@@ -60,6 +74,7 @@
     </objects>
     <resources>
         <image name="no_image" width="580" height="500"/>
+        <image name="white heart" width="239" height="210"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
