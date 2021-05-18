@@ -50,6 +50,7 @@ class FoodListViewController: UIViewController {
                 }
             }
             
+            self.arrayOfFoods.sort(by: {$0.id < $1.id})
             self.tableView.reloadData()
         })
         
@@ -60,7 +61,7 @@ class FoodListViewController: UIViewController {
             
             self.arrayOfFavourites.removeAll()
             
-            let array = dataSnapshot.value as! [Int]
+            let array = dataSnapshot.value as? [Int] ?? []
             for element in array {
                 print("valoarea este \(element)")
                 
@@ -91,6 +92,10 @@ extension FoodListViewController: UITableViewDataSource {
             } else {
                 cell.isFavourite = false
             }
+                        
+            cell.foodId = currentFood.id
+            
+            cell.favoriteIds = arrayOfFavourites
             
             cell.setupHeart()
             

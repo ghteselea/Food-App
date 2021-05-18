@@ -14,17 +14,32 @@ class FoodCell: UITableViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     
     var isFavourite: Bool = false
+    var foodId: Int?
+    var favoriteIds: [Int] = []
     
     static let identifier: String = String(describing: FoodCell.self) // FoodCel
     
     @IBAction func changeImageHeart(_ sender: UIButton) {
+        let database = FirebaseManager.sharedInstance.database
+        let rootRef = database.reference()
+        let favouritesRef = rootRef.child("favourites")
+        
         if isFavourite {
-            isFavourite = false
+            // stergi elementul
+            for(index, element) in favoriteIds.enumerated() {
+                if element == foodId {
+                    favoriteIds.remove(at: index)
+                    break
+                }
+            }
         } else {
-            isFavourite = true
+            guard let foodId = foodId else {
+                return
+            }
+            favoriteIds.append(foodId)
         }
         
-        setupHeart()
+        favouritesRef.updateChildValues(["id" : favoriteIds])
     }
     
     func setupHeart() {
