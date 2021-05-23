@@ -35,6 +35,7 @@ class FoodListViewController: UIViewController {
             dataSnapshot in
             
             self.arrayOfFavourites.removeAll()
+//            PersistenceService.sharedInstance.deleteEntity(named: "FoodEntity")
             
             let dictionaries = dataSnapshot.value as! [String : Any]
             for dictionary in dictionaries {
@@ -45,6 +46,7 @@ class FoodListViewController: UIViewController {
                     let food = try Food(dictionary: dictionary.value as? [String : Any] ?? [:])
                     print(food.name)
                     self.arrayOfFoods.append(food)
+//                    FoodEntity.saveFood(from: dictionary.value as? [String : Any] ?? [:])
                 } catch {
                     print(error.localizedDescription)
                 }

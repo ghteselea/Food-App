@@ -19,6 +19,10 @@
 		4A4D70A626513195007A4848 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70A526513195007A4848 /* AlertManager.swift */; };
 		4A4D70AE26514DB0007A4848 /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70AD26514DB0007A4848 /* UserAccountViewController.swift */; };
 		4A4D70D5265AA5AB007A4848 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70D4265AA5AB007A4848 /* PersistenceService.swift */; };
+		4A4D70DB265AA6AE007A4848 /* FoodEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70D9265AA6AE007A4848 /* FoodEntity+CoreDataClass.swift */; };
+		4A4D70DC265AA6AE007A4848 /* FoodEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70DA265AA6AE007A4848 /* FoodEntity+CoreDataProperties.swift */; };
+		4A4D70E1265AA72E007A4848 /* Favorites+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70DF265AA72E007A4848 /* Favorites+CoreDataClass.swift */; };
+		4A4D70E2265AA72E007A4848 /* Favorites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70E0265AA72E007A4848 /* Favorites+CoreDataProperties.swift */; };
 		4AB28C612647C893005BA2E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AB28C602647C893005BA2E8 /* GoogleService-Info.plist */; };
 		4AB28C75264C57DD005BA2E8 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB28C74264C57DD005BA2E8 /* Food.swift */; };
 		4AB28C7B264DAC08005BA2E8 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB28C79264DAC08005BA2E8 /* FoodCell.swift */; };
@@ -44,6 +48,10 @@
 		4A4D70A526513195007A4848 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		4A4D70AD26514DB0007A4848 /* UserAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewController.swift; sourceTree = "<group>"; };
 		4A4D70D4265AA5AB007A4848 /* PersistenceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		4A4D70D9265AA6AE007A4848 /* FoodEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		4A4D70DA265AA6AE007A4848 /* FoodEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		4A4D70DF265AA72E007A4848 /* Favorites+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorites+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		4A4D70E0265AA72E007A4848 /* Favorites+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorites+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		4AB28C602647C893005BA2E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4AB28C74264C57DD005BA2E8 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		4AB28C79264DAC08005BA2E8 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
@@ -148,6 +156,33 @@
 			path = FoodFavouritesList;
 			sourceTree = "<group>";
 		};
+		4A4D70D7265AA671007A4848 /* FoodEntity */ = {
+			isa = PBXGroup;
+			children = (
+				4A4D70D9265AA6AE007A4848 /* FoodEntity+CoreDataClass.swift */,
+				4A4D70DA265AA6AE007A4848 /* FoodEntity+CoreDataProperties.swift */,
+			);
+			path = FoodEntity;
+			sourceTree = "<group>";
+		};
+		4A4D70D8265AA688007A4848 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4A4D70DE265AA714007A4848 /* FavoritesEntity */,
+				4A4D70D7265AA671007A4848 /* FoodEntity */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		4A4D70DE265AA714007A4848 /* FavoritesEntity */ = {
+			isa = PBXGroup;
+			children = (
+				4A4D70DF265AA72E007A4848 /* Favorites+CoreDataClass.swift */,
+				4A4D70E0265AA72E007A4848 /* Favorites+CoreDataProperties.swift */,
+			);
+			path = FavoritesEntity;
+			sourceTree = "<group>";
+		};
 		4AB28C73264C57C9005BA2E8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +267,7 @@
 		4AB28C8E264DBECC005BA2E8 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				4A4D70D8265AA688007A4848 /* Entities */,
 				4A15B0DE26399A080099013F /* FoodApp.xcdatamodeld */,
 				4A4D70D4265AA5AB007A4848 /* PersistenceService.swift */,
 			);
@@ -374,14 +410,18 @@
 			files = (
 				4A4D70A126511E06007A4848 /* LoginViewController.swift in Sources */,
 				4A4D70D5265AA5AB007A4848 /* PersistenceService.swift in Sources */,
+				4A4D70DC265AA6AE007A4848 /* FoodEntity+CoreDataProperties.swift in Sources */,
 				4A15B0DA26399A080099013F /* FoodListViewController.swift in Sources */,
 				4A4D70A626513195007A4848 /* AlertManager.swift in Sources */,
 				4A4D70AE26514DB0007A4848 /* UserAccountViewController.swift in Sources */,
 				4A15B0E026399A080099013F /* FoodApp.xcdatamodeld in Sources */,
+				4A4D70E2265AA72E007A4848 /* Favorites+CoreDataProperties.swift in Sources */,
 				4AB28C88264DBCB4005BA2E8 /* UIImageView+Extension.swift in Sources */,
 				4AB28C75264C57DD005BA2E8 /* Food.swift in Sources */,
 				4AB28C91264DBF14005BA2E8 /* FirebaseManager.swift in Sources */,
 				4AB28C7B264DAC08005BA2E8 /* FoodCell.swift in Sources */,
+				4A4D70E1265AA72E007A4848 /* Favorites+CoreDataClass.swift in Sources */,
+				4A4D70DB265AA6AE007A4848 /* FoodEntity+CoreDataClass.swift in Sources */,
 				4A15B0D626399A080099013F /* AppDelegate.swift in Sources */,
 				4A15B0D826399A080099013F /* SceneDelegate.swift in Sources */,
 			);

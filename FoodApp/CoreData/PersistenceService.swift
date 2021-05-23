@@ -27,7 +27,7 @@ class PersistenceService {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "Cordeita")
+        let container = NSPersistentContainer(name: "FoodApp")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -67,6 +67,18 @@ class PersistenceService {
                 print("Unresolved error \(nserror), \(nserror.userInfo)")
                 #endif
             }
+        }
+    }
+    
+    func deleteEntity(named entityName: String) {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entityName)
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        do {
+            try context.execute(deleteRequest)
+        } catch let error as NSError {
+            // TODO: handle the error
+            print("Error: \(error.localizedDescription)")
         }
     }
     
