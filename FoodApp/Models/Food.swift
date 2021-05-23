@@ -29,4 +29,14 @@ struct Food: Codable {
     init(dictionary: [String: Any]) throws {
         self = try JSONDecoder().decode(Food.self, from: JSONSerialization.data(withJSONObject: dictionary))
     }
+    
+    init(foodEntity: FoodEntity) {
+        self.id = Int(foodEntity.id)
+        self.extra = foodEntity.extra ?? []
+        self.ingrediens = foodEntity.ingredients ?? []
+        self.name = foodEntity.name ?? ""
+        self.price = foodEntity.price
+        self.type = foodEntity.type ?? ""
+        self.url = foodEntity.url ?? ""
+    }
 }

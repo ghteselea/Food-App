@@ -34,27 +34,25 @@ class FoodListViewController: UIViewController {
         foodsRef.observe(.value, with: {
             dataSnapshot in
             
-            self.arrayOfFavourites.removeAll()
-//            PersistenceService.sharedInstance.deleteEntity(named: "FoodEntity")
+            PersistenceService.sharedInstance.deleteEntity(named: "FoodEntity")
             
             let dictionaries = dataSnapshot.value as! [String : Any]
             for dictionary in dictionaries {
                 print("cheia este \(dictionary.key)")
                 print("valoarea este \(dictionary.value)")
                 
-                do {
-                    let food = try Food(dictionary: dictionary.value as? [String : Any] ?? [:])
-                    print(food.name)
-                    self.arrayOfFoods.append(food)
-//                    FoodEntity.saveFood(from: dictionary.value as? [String : Any] ?? [:])
-                } catch {
-                    print(error.localizedDescription)
-                }
+                FoodEntity.saveFood(from: dictionary.value as? [String : Any] ?? [:])
             }
+            
+            self.arrayOfFoods = FoodEntity.getAllFoods()
             
             self.arrayOfFoods.sort(by: {$0.id < $1.id})
             self.tableView.reloadData()
-        })
+        }) { (error) in
+            print(error.localizedDescription)
+            
+            self.arrayOfFoods = FoodEntity.getAllFoods()
+        }
         
         let favouritesRef = rootRef.child("favourites")
         let idsRef = favouritesRef.child("id")

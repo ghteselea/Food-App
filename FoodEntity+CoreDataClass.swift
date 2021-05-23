@@ -33,4 +33,22 @@ extension FoodEntity {
             print("Not able to create a Food item")
         }
     }
+    
+    func convertFoodEntityToFood() -> Food {
+        let food = Food(foodEntity: self)
+        return food
+    }
+    
+    static func getAllFoods() -> [Food] {
+        do {
+            let context: NSManagedObjectContext = PersistenceService.sharedInstance.context
+            
+            let foods: [FoodEntity] = try context.fetch(FoodEntity.fetchRequest()) as? [FoodEntity] ?? []
+            return foods.map { $0.convertFoodEntityToFood() }
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+            return []
+        }
+
+    }
 }
