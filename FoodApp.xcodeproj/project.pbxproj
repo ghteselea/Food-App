@@ -18,6 +18,7 @@
 		4A4D70A126511E06007A4848 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70A026511E06007A4848 /* LoginViewController.swift */; };
 		4A4D70A626513195007A4848 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70A526513195007A4848 /* AlertManager.swift */; };
 		4A4D70AE26514DB0007A4848 /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70AD26514DB0007A4848 /* UserAccountViewController.swift */; };
+		4A4D70D5265AA5AB007A4848 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70D4265AA5AB007A4848 /* PersistenceService.swift */; };
 		4AB28C612647C893005BA2E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AB28C602647C893005BA2E8 /* GoogleService-Info.plist */; };
 		4AB28C75264C57DD005BA2E8 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB28C74264C57DD005BA2E8 /* Food.swift */; };
 		4AB28C7B264DAC08005BA2E8 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB28C79264DAC08005BA2E8 /* FoodCell.swift */; };
@@ -42,6 +43,7 @@
 		4A4D70A026511E06007A4848 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4A4D70A526513195007A4848 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		4A4D70AD26514DB0007A4848 /* UserAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewController.swift; sourceTree = "<group>"; };
+		4A4D70D4265AA5AB007A4848 /* PersistenceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		4AB28C602647C893005BA2E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4AB28C74264C57DD005BA2E8 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		4AB28C79264DAC08005BA2E8 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				4A15B0DE26399A080099013F /* FoodApp.xcdatamodeld */,
+				4A4D70D4265AA5AB007A4848 /* PersistenceService.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A4D70A126511E06007A4848 /* LoginViewController.swift in Sources */,
+				4A4D70D5265AA5AB007A4848 /* PersistenceService.swift in Sources */,
 				4A15B0DA26399A080099013F /* FoodListViewController.swift in Sources */,
 				4A4D70A626513195007A4848 /* AlertManager.swift in Sources */,
 				4A4D70AE26514DB0007A4848 /* UserAccountViewController.swift in Sources */,
