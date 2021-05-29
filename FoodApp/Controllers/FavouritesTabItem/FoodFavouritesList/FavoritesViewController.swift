@@ -35,6 +35,8 @@ class FavoritesViewController: UIViewController {
     func setupScreen() {
         tableView.dataSource = self
         tableView.register(UINib(nibName: FoodCell.identifier, bundle: nil), forCellReuseIdentifier: FoodCell.identifier)
+        tableView.rowHeight = 80.0
+        tableView.estimatedRowHeight = 80.0
     }
     
     func getFavoriteFoods() {

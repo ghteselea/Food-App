@@ -15,7 +15,7 @@
 		4A15B0E226399A0E0099013F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A15B0E126399A0E0099013F /* Assets.xcassets */; };
 		4A15B0E526399A0E0099013F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A15B0E326399A0E0099013F /* LaunchScreen.storyboard */; };
 		4A15B0EE2639C3550099013F /* Design.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A15B0ED2639C3550099013F /* Design.storyboard */; };
-		4A4082C3266297020036A53B /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4082C2266297020036A53B /* FavoritesViewController.swift */; };
+		4A4082C72662A48B0036A53B /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4082C62662A48B0036A53B /* FavoritesViewController.swift */; };
 		4A4D70A126511E06007A4848 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70A026511E06007A4848 /* LoginViewController.swift */; };
 		4A4D70A626513195007A4848 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70A526513195007A4848 /* AlertManager.swift */; };
 		4A4D70AE26514DB0007A4848 /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70AD26514DB0007A4848 /* UserAccountViewController.swift */; };
@@ -45,7 +45,7 @@
 		4A15B0E426399A0E0099013F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A15B0E626399A0E0099013F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A15B0ED2639C3550099013F /* Design.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Design.storyboard; sourceTree = "<group>"; };
-		4A4082C2266297020036A53B /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesViewController.swift; path = ../../../../../FavoritesViewController.swift; sourceTree = "<group>"; };
+		4A4082C62662A48B0036A53B /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		4A4D70A026511E06007A4848 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4A4D70A526513195007A4848 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		4A4D70AD26514DB0007A4848 /* UserAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewController.swift; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 		4A4D70B326544F76007A4848 /* FoodFavouritesList */ = {
 			isa = PBXGroup;
 			children = (
-				4A4082C2266297020036A53B /* FavoritesViewController.swift */,
+				4A4082C62662A48B0036A53B /* FavoritesViewController.swift */,
 			);
 			path = FoodFavouritesList;
 			sourceTree = "<group>";
@@ -419,7 +419,7 @@
 				4A4D70AE26514DB0007A4848 /* UserAccountViewController.swift in Sources */,
 				4A15B0E026399A080099013F /* FoodApp.xcdatamodeld in Sources */,
 				4A4D70E2265AA72E007A4848 /* Favorites+CoreDataProperties.swift in Sources */,
-				4A4082C3266297020036A53B /* FavoritesViewController.swift in Sources */,
+				4A4082C72662A48B0036A53B /* FavoritesViewController.swift in Sources */,
 				4AB28C88264DBCB4005BA2E8 /* UIImageView+Extension.swift in Sources */,
 				4AB28C75264C57DD005BA2E8 /* Food.swift in Sources */,
 				4AB28C91264DBF14005BA2E8 /* FirebaseManager.swift in Sources */,
