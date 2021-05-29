@@ -17,10 +17,21 @@ class FoodCell: UITableViewCell {
     var isFavourite: Bool = false
     var foodId: Int?
     var favoriteIds: [Int] = []
+    var isFavoriteCell: Bool = false
     
-    static let identifier: String = String(describing: FoodCell.self) // FoodCel
+    static let identifier: String = String(describing: FoodCell.self) // "FoodCell"
     
     @IBAction func changeImageHeart(_ sender: UIButton) {
+        
+        guard let viewController = viewController else {
+            return
+        }
+        
+        guard !isFavoriteCell else {
+            AlertManager.shared.showAlertManager(vc: viewController, message: "You can only change the status from the home screen", handler: {})
+            return
+        }
+        
         let database = FirebaseManager.sharedInstance.database
         let rootRef = database.reference()
         let favouritesRef = rootRef.child("favourites")

@@ -59,14 +59,13 @@ class FoodListViewController: UIViewController {
         idsRef.observe(.value, with: {
             dataSnapshot in
             
+            PersistenceService.sharedInstance.deleteEntity(named: "Favorites")
             self.arrayOfFavourites.removeAll()
             
             let array = dataSnapshot.value as? [Int] ?? []
-            for element in array {
-                print("valoarea este \(element)")
-                
-                self.arrayOfFavourites.append(element)
-            }
+            Favorites.saveFavorites(ids: array)
+            
+            self.arrayOfFavourites = Favorites.getFavorites()
             
             self.tableView.reloadData()
         })

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Food Favourites List Table View Controller-->
+        <!--Favorites View Controller-->
         <scene sceneID="8Qj-hq-99u">
             <objects>
-                <viewController id="gNG-ZA-GMa" customClass="FoodFavouritesListTableViewController" customModule="FoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gNG-ZA-GMa" customClass="FavoritesViewController" customModule="FoodApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vmb-31-lbG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,6 +31,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rBH-Ky-ces"/>
+                    <connections>
+                        <outlet property="tableView" destination="Vjz-fo-C6x" id="4wc-sR-5lw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAz-eQ-AuZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
