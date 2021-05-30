@@ -32,9 +32,21 @@ class FoodCell: UITableViewCell {
             return
         }
         
+        guard let user = UserEntity.getLoggedUer() else {
+            AlertManager.shared.showAlertManager(vc: viewController, message: "You are not logged in", handler: {})
+            return
+        }
+        
         let database = FirebaseManager.sharedInstance.database
         let rootRef = database.reference()
-        let favouritesRef = rootRef.child("favourites")
+        let usersRef = rootRef.child("users")
+        
+        guard let uid = user.uid else {
+            return
+        }
+        
+        let currentUser = usersRef.child("\(uid)")
+        let favouritesRef = currentUser.child("favourites")
         
         if isFavourite {
             // stergi elementul

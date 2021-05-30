@@ -12,8 +12,15 @@
         <attribute name="type" optional="YES" attributeType="String"/>
         <attribute name="url" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="UserEntity" representedClassName=".UserEntity" syncable="YES">
+        <attribute name="isAnonymous" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isEmailVerified" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="providerID" optional="YES" attributeType="String"/>
+        <attribute name="uid" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="Favorites" positionX="0" positionY="45" width="128" height="44"/>
         <element name="FoodEntity" positionX="-36" positionY="18" width="128" height="134"/>
+        <element name="UserEntity" positionX="-18" positionY="72" width="128" height="89"/>
     </elements>
 </model>

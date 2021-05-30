@@ -16,6 +16,8 @@
 		4A15B0E526399A0E0099013F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A15B0E326399A0E0099013F /* LaunchScreen.storyboard */; };
 		4A15B0EE2639C3550099013F /* Design.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A15B0ED2639C3550099013F /* Design.storyboard */; };
 		4A4082C72662A48B0036A53B /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4082C62662A48B0036A53B /* FavoritesViewController.swift */; };
+		4A4082CC266380120036A53B /* UserEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4082CA266380120036A53B /* UserEntity+CoreDataClass.swift */; };
+		4A4082CD266380120036A53B /* UserEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4082CB266380120036A53B /* UserEntity+CoreDataProperties.swift */; };
 		4A4D70A126511E06007A4848 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70A026511E06007A4848 /* LoginViewController.swift */; };
 		4A4D70A626513195007A4848 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70A526513195007A4848 /* AlertManager.swift */; };
 		4A4D70AE26514DB0007A4848 /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D70AD26514DB0007A4848 /* UserAccountViewController.swift */; };
@@ -46,6 +48,8 @@
 		4A15B0E626399A0E0099013F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A15B0ED2639C3550099013F /* Design.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Design.storyboard; sourceTree = "<group>"; };
 		4A4082C62662A48B0036A53B /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		4A4082CA266380120036A53B /* UserEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4A4082CB266380120036A53B /* UserEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4A4D70A026511E06007A4848 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4A4D70A526513195007A4848 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		4A4D70AD26514DB0007A4848 /* UserAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,15 @@
 			path = FoodApp;
 			sourceTree = "<group>";
 		};
+		4A4082C926637E0B0036A53B /* UserEntity */ = {
+			isa = PBXGroup;
+			children = (
+				4A4082CA266380120036A53B /* UserEntity+CoreDataClass.swift */,
+				4A4082CB266380120036A53B /* UserEntity+CoreDataProperties.swift */,
+			);
+			path = UserEntity;
+			sourceTree = "<group>";
+		};
 		4A4D709F26511DC7007A4848 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +184,7 @@
 		4A4D70D8265AA688007A4848 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				4A4082C926637E0B0036A53B /* UserEntity */,
 				4A4D70DE265AA714007A4848 /* FavoritesEntity */,
 				4A4D70D7265AA671007A4848 /* FoodEntity */,
 			);
@@ -412,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A4D70A126511E06007A4848 /* LoginViewController.swift in Sources */,
+				4A4082CD266380120036A53B /* UserEntity+CoreDataProperties.swift in Sources */,
 				4A4D70D5265AA5AB007A4848 /* PersistenceService.swift in Sources */,
 				4A4D70DC265AA6AE007A4848 /* FoodEntity+CoreDataProperties.swift in Sources */,
 				4A15B0DA26399A080099013F /* FoodListViewController.swift in Sources */,
@@ -424,6 +439,7 @@
 				4AB28C75264C57DD005BA2E8 /* Food.swift in Sources */,
 				4AB28C91264DBF14005BA2E8 /* FirebaseManager.swift in Sources */,
 				4AB28C7B264DAC08005BA2E8 /* FoodCell.swift in Sources */,
+				4A4082CC266380120036A53B /* UserEntity+CoreDataClass.swift in Sources */,
 				4A4D70E1265AA72E007A4848 /* Favorites+CoreDataClass.swift in Sources */,
 				4A4D70DB265AA6AE007A4848 /* FoodEntity+CoreDataClass.swift in Sources */,
 				4A15B0D626399A080099013F /* AppDelegate.swift in Sources */,

@@ -26,7 +26,29 @@ class FoodListViewController: UIViewController {
         tableView.rowHeight = 80.0
         tableView.estimatedRowHeight = 80.0
         
-        // MARK: - CITIRE DATE DIN FIREBASE
+        checkIfUserIsStillLoggedIn()
+        getFoods()
+        getFavorites()
+    }
+    
+    func checkIfUserIsStillLoggedIn() {
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            guard let user = user else {
+                PersistenceService.sharedInstance.deleteEntity(named: String(describing: UserEntity.self))
+                PersistenceService.sharedInstance.deleteEntity(named: String(describing: Favorites.self))
+                
+                self.arrayOfFavourites.removeAll()
+                self.tableView.reloadData()
+                
+                return
+            }
+            
+            UserEntity.saveLoggedUser(isAnonymous: user.isAnonymous, isEmailVerified: user.isEmailVerified, providerID: user.providerID, uid: user.uid)
+            self.getFavorites()
+        }
+    }
+    
+    func getFoods() {
         let database = FirebaseManager.sharedInstance.database
         let rootRef = database.reference()
         
@@ -53,8 +75,30 @@ class FoodListViewController: UIViewController {
             
             self.arrayOfFoods = FoodEntity.getAllFoods()
         }
+    }
+    
+    func getFavorites() {
         
-        let favouritesRef = rootRef.child("favourites")
+        guard let user = UserEntity.getLoggedUer() else {
+            arrayOfFavourites.removeAll()
+            tableView.reloadData()
+            return
+        }
+        
+        guard let uid = user.uid else {
+            arrayOfFavourites.removeAll()
+            tableView.reloadData()
+            return
+        }
+        
+        let database = FirebaseManager.sharedInstance.database
+        let rootRef = database.reference()
+        
+        let usersRef = rootRef.child("users")
+        
+        let currentUser = usersRef.child("\(uid)")
+        let favouritesRef = currentUser.child("favourites")
+        
         let idsRef = favouritesRef.child("id")
         idsRef.observe(.value, with: {
             dataSnapshot in

@@ -33,6 +33,7 @@ class UserAccountViewController: UIViewController {
     @IBAction func logoutBtnPressed(_ sender: Any) {
         do {
             try Auth.auth().signOut()
+            PersistenceService.sharedInstance.deleteEntity(named: String(describing: FoodEntity.self))
         } catch let error {
             AlertManager.shared.showAlertManager(vc: self, message: error.localizedDescription, handler: {
                 print("Error signing out: %@", error)
